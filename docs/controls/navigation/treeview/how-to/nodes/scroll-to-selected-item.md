@@ -28,7 +28,10 @@ The following example demonstrates how to scroll the TreeView viewport to the se
 
       // scroll to selected item
       var itemScrollTop = treeview.select()[0].offsetTop;
-      $("html,body").animate({ scrollTop: itemScrollTop });
+      //Reference added by RHR to DOM so only TreeView will Scroll
+      $("#tree").animate({ scrollTop: itemScrollTop });
+      //REM by RHR removed "html,body" we do not want to scroll the page
+      //$("html,body").animate({ scrollTop: itemScrollTop });
     </script>
 ```
 
